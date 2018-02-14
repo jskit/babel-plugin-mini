@@ -12,7 +12,6 @@
     "benchmark": "npm test && node benchmark",
     "build": "rimraf lib && babel src -d lib --ignore test",
     "prepublish": "npm run build",
-    "prepublishOnly": "npm run build",
     "test2": "mocha --harmony --require babel-core/register test/**/*.spec.js",
     "test": "./node_modules/.bin/_mocha $npm_package_options_mocha",
     "mini": "./node_modules/.bin/_mocha $npm_package_options_mini",
