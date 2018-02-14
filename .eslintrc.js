@@ -14,7 +14,6 @@ module.exports = {
   ],
   // required to lint *.vue files
   "plugins": [
-    "babel",
     // "vue-libs",
     "import",
     // "html",
