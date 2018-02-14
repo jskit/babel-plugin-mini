@@ -4,15 +4,19 @@
   "description": "转换小程序",
   "main": "lib/index.js",
   "options": {
-    "mocha": "--require ./resources/mocha-bootload --check-leaks --full-trace --timeout 15000 src/**/__tests__/**/*-test.js"
+    "mini": "--harmony --require babel-core/register test/*.spec.js",
+    "mocha": "--harmony --require babel-core/register test/**/*.spec.js"
   },
   "scripts": {
-    "prepublishOnly": "npm run lib",
-    "lib": "babel src -d lib",
-    "benchmark": "node test && node benchmark",
-    "test": "npm run lint && npm run check && npm run testonly",
-    "testonly": "babel-node ./node_modules/.bin/_mocha $npm_package_options_mocha",
-    "lint": "eslint --ext .js src app"
+    "clean": "rm -rf lib",
+    "benchmark": "npm test && node benchmark",
+    "build": "rimraf lib && babel src -d lib --ignore test",
+    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
+    "test2": "mocha --harmony --require babel-core/register test/**/*.spec.js",
+    "test": "./node_modules/.bin/_mocha $npm_package_options_mocha",
+    "mini": "./node_modules/.bin/_mocha $npm_package_options_mini",
+    "lint": "./node_modules/.bin/eslint --ext .js src app"
   },
   "repository": {
     "type": "git",
@@ -23,7 +27,7 @@
     "2mini",
     "aliapp",
     "wxapp",
-    "kitjs"
+    "jskit"
   ],
   "author": "cloudyan <1395093509@qq.com>",
   "license": "MIT",
@@ -33,6 +37,7 @@
   "homepage": "https://github.com/jskit/babel-plugin-mini#readme",
   "dependencies": {},
   "devDependencies": {
+    "assets": "^3.0.0",
     "autoprefixer": "^7.2.5",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
@@ -46,13 +51,15 @@
     "babel-preset-stage-2": "^6.24.1",
     "benchmark": "^2.1.4",
     "bluebird": "^3.5.1",
+    "chai": "^4.1.2",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-friendly-formatter": "^3.0.0",
-    "eslint-import-resolver-webpack": "^0.8.4",
     "eslint-plugin-html": "^4.0.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^5.2.1",
-    "opn": "^5.2.0"
+    "mocha": "^5.0.0",
+    "opn": "^5.2.0",
+    "rimraf": "^2.6.2"
   }
 }

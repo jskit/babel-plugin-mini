@@ -9,14 +9,14 @@ const transformCode = (str) => {
   return transform(str, {
     comments: false,
     plugins: [
-      './src',
+      './src/examples/import',
     ],
   }).code
 }
 
 describe('Plugin', () => {
-  describe('Mini', () => {
-    it('test', () => {
+  describe('Import', () => {
+    it('import', () => {
       // 清除注释，删除文件底部换行
       const code = `
 // 注释

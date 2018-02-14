@@ -8,10 +8,15 @@ module.exports = {
   },
   "extends": [
     "airbnb-base",
+    // "vue"
+    // "eslint-config-vue": "^2.0.2",
+    // "plugin:vue-libs/recommended",
   ],
   // required to lint *.vue files
   "plugins": [
-    "import"
+    // "vue-libs",
+    "import",
+    // "html",
   ],
   "env": {
     "browser": true,
@@ -30,10 +35,28 @@ module.exports = {
     "__TEST__": false,
     "__WEEX__": true
   },
+  // check if imports actually resolve
+  // 需要安装 eslint-import-resolver-webpack
+  // 'settings': {
+  //   'import/resolver': {
+  //     'webpack': {
+  //       'config': 'build/webpack.base.conf.js'
+  //     }
+  //   }
+  // },
   // 根据需要修改 rules，详见 http://eslint.org/docs/rules/
   // 推荐的编码风格 https://github.com/airbnb/javascript
   // add your custom rules here
   "rules": {
+    // don't require .vue extension when importing
+    // 'import/extensions': ['error', 'always', {
+    //   'js': 'never',
+    //   'vue': 'never'
+    // }],
+    // allow optionalDependencies
+    // 'import/no-extraneous-dependencies': ['error', {
+    //   'optionalDependencies': ['test/unit/index.js']
+    // }],
     "arrow-body-style": 0,
     "class-methods-use-this": 0,
     "comma-dangle": ["error", "always-multiline"],
@@ -43,8 +66,11 @@ module.exports = {
     "import/extensions": 0,
     "import/first": 0,
     "import/no-absolute-path": 0,
+    "import/no-duplicates": 0,
     "import/no-dynamic-require": 0,
     "import/no-extraneous-dependencies": 0,
+    "import/no-named-as-default-member": 0,
+    "import/no-named-as-default": 0,
     "import/no-unresolved": 0,
     "import/prefer-default-export": 0,
     "linebreak-style": 0,
@@ -54,7 +80,10 @@ module.exports = {
     "no-console": 0,
     "no-else-return": 0,
     "no-mixed-operators": 0,
-    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
+    "no-multiple-empty-lines": ["error", {
+      "max": 2,
+      "maxEOF": 1,
+    }],
     "no-nested-ternary": 0,
     "no-param-reassign": 0,
     "no-plusplus": 0,
@@ -64,6 +93,7 @@ module.exports = {
         "res",
         "err",
         "cb",
+        "state",
         "resolve",
         "reject",
         "done"
@@ -80,8 +110,12 @@ module.exports = {
     }],
     "prefer-template": 0,
     "prefer-arrow-callback": 0,
-    "require-yield": 1,
+    "quotes": ["error", "single", {
+      "avoidEscape": true,
+      "allowTemplateLiterals": true,
+    }],
     "semi": ["error", "never"],
+    "require-yield": 1,
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "ignore",
