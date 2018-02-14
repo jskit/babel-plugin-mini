@@ -1,5 +1,7 @@
 # babel-plugin-mini
 
+[![Circle CI](https://circleci.com/gh/jskit/babel-plugin-mini/tree/master.svg?style=svg)](https://circleci.com/gh/jskit/babel-plugin-mini/tree/master)
+
 转换小程序
 
 ## Usage
