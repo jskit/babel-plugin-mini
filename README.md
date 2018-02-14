@@ -1,8 +1,10 @@
 # babel-plugin-mini
 
-[![Circle CI](https://circleci.com/gh/jskit/babel-plugin-mini/tree/master.svg?style=svg)](https://circleci.com/gh/jskit/babel-plugin-mini/tree/master)
-
 转换小程序
+
+**提示** 正在开发中，暂无法使用
+
+[![Circle CI](https://circleci.com/gh/jskit/babel-plugin-mini/tree/master.svg?style=svg)](https://circleci.com/gh/jskit/babel-plugin-mini/tree/master)
 
 ## Usage
 
@@ -14,7 +16,7 @@ npm t
 npm run build
 ```
 
-**提示** 正在开发中，暂无法使用
+## 部分错误处理方案
 
 ```bash
 # mocha 报错解决方案
