@@ -21,11 +21,14 @@ mocha --harmony --require babel-core/register test/*.spec.js
 yarn add babel-cli --dev
 ```
 
-- Cannot read property 'range' of null
+- Fix Cannot read property range of null from on lint
 
 ```bash
 > eslint --ext .js src app
 
 Cannot read property 'range' of null
 TypeError: Cannot read property 'range' of null
+
+# 8.2.1 有bug，改使用以下版本
+yarn add babel-eslint@7.2.3 --dev
 ```
