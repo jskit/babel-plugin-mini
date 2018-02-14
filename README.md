@@ -2,6 +2,16 @@
 
 转换小程序
 
+## Usage
+
+```bash
+# test
+npm t
+
+# build
+npm run build
+```
+
 **提示** 正在开发中，暂无法使用
 
 ```bash

@@ -1,4 +1,6 @@
 
+// https://github.com/jonsharratt/babel-plugin-starter
+
 export default function () {
   return {
     visitor: {
