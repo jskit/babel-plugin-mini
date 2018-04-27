@@ -9,16 +9,14 @@ const transformCode = (str) => {
   return transform(str, {
     comments: true,
     plugins: [
-      ['./src', {
-        miniType: 'aliapp', // wxapp
-      }],
+      './src/examples/import',
     ],
   }).code
 }
 
 describe('Plugin', () => {
-  describe('Mini', () => {
-    it('test', () => {
+  describe('Import', () => {
+    it('import', () => {
       // 清除注释，删除文件底部换行
       const code = `
 // 保留注释

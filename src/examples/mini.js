@@ -7,23 +7,11 @@ const toLowerCase = (word) => {
 
 export default ({ types }) => {
   return {
-    pre(state) {
-      this.cache = new Map()
-    },
-
     // 插件入口
     visitor: {
       // your visitor methods go here
-
-      // 用babel-code-frame和一个消息抛出一个错误：
-      // StringLiteral(path) {
-      //   throw path.buildCodeFrameError("Error message here");
-      // }
-
       // 处理类型： Import声明
-      ImportDeclaration(path, state) {
-        // { miniType: 'aliapp' }
-        // console.log(state.opts)
+      ImportDeclaration(path) {
         const { node } = path
         const { type, specifiers, source } = node
         console.log(type)
@@ -39,10 +27,6 @@ export default ({ types }) => {
           source.value += `/lib/${element}`
         }
       },
-    },
-
-    post(state) {
-      console.log(this.cache)
     },
   }
 }

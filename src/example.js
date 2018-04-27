@@ -1,4 +1,12 @@
 
+// export default function ({ Plugin, types: t }) {
+//   return new Plugin("test", {
+//     visitor: {
+//       // your visitor methods go here
+//     }
+//   });
+// }
+
 export default function (babel) {
   // const t = babel.types // AST模块
   // const imports = {}

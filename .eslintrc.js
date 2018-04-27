@@ -80,6 +80,9 @@ module.exports = {
     "no-console": 0,
     "no-else-return": 0,
     "no-mixed-operators": 0,
+    "no-multi-spaces": ["error", {
+      "ignoreEOLComments": true,
+    }],
     "no-multiple-empty-lines": ["error", {
       "max": 2,
       "maxEOF": 1,
@@ -114,7 +117,7 @@ module.exports = {
       "avoidEscape": true,
       "allowTemplateLiterals": true,
     }],
-    "semi": ["error", "never"],
+    "semi": [0, "never"],
     "require-yield": 1,
     "space-before-function-paren": ["error", {
       "anonymous": "always",
