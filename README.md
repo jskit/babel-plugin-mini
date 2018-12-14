@@ -4,7 +4,7 @@
 
 **提示** 正在开发中，暂无法使用
 
-[![Circle CI](https://circleci.com/gh/jskit/babel-plugin-mini/tree/master.svg?style=svg)](https://circleci.com/gh/jskit/babel-plugin-mini/tree/master)
+[![Circle CI](https://circleci.com/gh/jskit/babel-plugin-mini/tree/master.svg?style=svg)](https://circleci.com/gh/jskit/babel-plugin-mini/tree/master) [![Greenkeeper badge](https://badges.greenkeeper.io/jskit/babel-plugin-mini.svg)](https://greenkeeper.io/)
 
 ## Usage
 
